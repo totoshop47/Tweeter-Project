@@ -1,8 +1,6 @@
 $(document).ready(function() {
   console.log('DOM is Ready!');
 
-
-
   $('.new-tweet form textarea').on('input', function(event){
     let counter = 140;
     let inputLength = this.value.length;
@@ -17,5 +15,9 @@ $(document).ready(function() {
   });
 });
 
+$( "form" ).on( "submit", function( event ) {
+  event.preventDefault();
+  console.log( $( this ).serialize() );
+});
 
 

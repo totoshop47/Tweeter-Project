@@ -19,7 +19,7 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 
@@ -29,11 +29,101 @@ body {
 
 
 main {
+  position: auto;
   width: 450px;
   margin: auto;
+  height: 100vh;
   background-color: white;
+
 }
 
+/*.content {
+  opacity: 0.7;
+}*/
+
+/*.content p {
+  opacity: 1.0;
+}*/
+
+#tweets-container {
+  margin-top: 80px;
+  height: 100vh;
+}
+
+.content:hover header {
+  opacity: 1.0;
+}
+
+.content:hover .icon {
+  visibility: visible;
+}
+
+header img {
+  border-radius: 5px;
+  margin: 10px;
+  float: left;
+}
+
+header {
+  background-color: #eeeeee;
+  font-size: 1.5em;
+  font-weight: bold;
+  position: relative;
+  height: 70px;
+  opacity: 0.7
+
+}
+
+header .tweetname {
+  font-size: 1em;
+  font-weight: bold;
+  float: left;
+}
+
+header .at {
+  font-size: 1rem;
+  font-weight: normal;
+  position: relative;
+  float: right;
+}
+
+header span {
+  padding: 10px 10px 0 0;
+}
+
+footer {
+  font-size: 1.0em;
+  border-top: 1px solid #eeeeee;
+  padding: 10px;
+}
+
+footer img {
+  visibility: hidden;
+  float: right;
+  width: 1.5em;
+}
+
+/*footer img:hover {
+  visibility: visible;
+}*/
+article {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  top: 60px;
+  /*margin: 40px 10px;*/
+}
+
+article:hover {
+  border: 1px solid #454545;
+}
+
+p {
+  margin: 20px 10px;
+}
 
 
 
