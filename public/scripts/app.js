@@ -73,15 +73,28 @@ function createTweetElement(tweets) {
   return $tweet;
 }
 
+// var $form = $('#create-puppy-form').submit(function(event){
+//   event.preventDefault();
+//   $.post('/api/puppies', $form.serialize())
+//     .then(function(puppy){
+//       $puppies.append(renderPuppy(puppy));
+//     });
+// })
+
 $(".new-tweet form").on("submit", function(event) {
   event.preventDefault();
   var textTyped = $(this).serialize();
-  $.ajax({
-    type: "POST",
-    url: '/tweets',
-    data: textTyped,
-    success: console.log("success")
-  });
+  console.log(textTyped.length - 5);
+  if(textTyped.length - 5 <= 140 && textTyped.length -5 !== 0) {
+    $.ajax({
+      type: "POST",
+      url: '/tweets',
+      data: textTyped,
+      success: console.log("success")
+    });
+  } else {
+    alert('Tweet cannot exceed 140 character or empty :(');
+  }
 });
 
 function success(data) {
@@ -89,13 +102,30 @@ function success(data) {
   renderTweets(data);
 }
 
+// function loadTweets() {
+//   $.ajax('/tweets')
+//     .then(function(data) {
+//       success(data);
+//     });
+// }
+  // function getPuppies(){
+  //   $.ajax('/api/puppies')
+  //     .then(function(puppies){
+  //       puppies.forEach(function(puppy){
+  //         $puppies.append(renderPuppy(puppy));
+  //       });
+  //     });
+  // }
+
+
 function loadTweets() {
   $.ajax({
   type: "GET",
   url: '/tweets',
   success: success
-});
+  });
 }
+
 loadTweets();
 // renderTweets(tweetData);
 });

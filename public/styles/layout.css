@@ -29,10 +29,10 @@ body {
 
 
 main {
-  position: auto;
+  position: relative;
   width: 450px;
   margin: auto;
-  height: 100vh;
+  /*height: 100vh;*/
   background-color: white;
 
 }
