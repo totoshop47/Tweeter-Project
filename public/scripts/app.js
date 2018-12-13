@@ -49,6 +49,7 @@ $(document).ready(function() {
 // ];
 
 function renderTweets(tweets) {
+  $('#tweets-container').empty();
   for(var arr of tweets) {
     $('#tweets-container').append(createTweetElement(arr));
   }
@@ -90,16 +91,17 @@ $(".new-tweet form").on("submit", function(event) {
       type: "POST",
       url: '/tweets',
       data: textTyped,
-      success: console.log("success")
+      success: loadTweets
     });
   } else {
-    alert('Tweet cannot exceed 140 character or empty :(');
+    alert('Tweet cannot be exceed 140 characters or empty :(');
   }
 });
 
-function success(data) {
-  console.log("success");
-  renderTweets(data);
+function success(tweets) {
+  tweets.reverse();
+
+  renderTweets(tweets);
 }
 
 // function loadTweets() {
@@ -108,6 +110,7 @@ function success(data) {
 //       success(data);
 //     });
 // }
+
   // function getPuppies(){
   //   $.ajax('/api/puppies')
   //     .then(function(puppies){
