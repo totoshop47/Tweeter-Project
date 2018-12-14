@@ -15,7 +15,6 @@ html {
  */
 
 body {
-
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   color: #244751;
@@ -31,9 +30,11 @@ body {
 main {
   position: relative;
   width: 450px;
-  margin: auto;
   /*height: 100vh;*/
   background-color: white;
+  margin: auto;
+  padding-top:50px;
+  /*height: 100%;*/
 
 }
 
@@ -46,7 +47,8 @@ main {
 }*/
 
 #tweets-container {
-  height: 100vh;
+  margin-top: 70px;
+  height: 100%
 }
 
 .content:hover header {
@@ -112,8 +114,6 @@ article {
   background-color: white;
   border-radius: 5px;
   position: relative;
-  top: 60px;
-  /*margin: 40px 10px;*/
 }
 
 article:hover {

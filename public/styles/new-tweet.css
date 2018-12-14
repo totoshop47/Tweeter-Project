@@ -19,10 +19,18 @@
   color: #244751;;
 }
 
+.err {
+  display: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: red;
+}
+
 .new-tweet {
+  display: none;
   padding: 10px;
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto 20px auto;
   border: 1px solid #cccccc;
   background-color: #eeeeee;
   border-radius: 5px;
