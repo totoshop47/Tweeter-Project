@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of tweet compose box"](#)
-!["Screenshot of tweets"](#)
+!["Screenshot of tweet compose box"](https://github.com/totoshop47/Tweeter-Project/blob/master/docs/tweet-box.png)
+!["Screenshot of tweets"](https://github.com/totoshop47/Tweeter-Project/blob/master/docs/tweets.png)
 
 ## Getting Started
 
