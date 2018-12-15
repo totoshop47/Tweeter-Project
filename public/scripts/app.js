@@ -31,14 +31,14 @@ $(document).ready(function() {
     const at = tweets.user.handle;
     const cont = tweets.content.text;
     let footer = tweets.created_at;
-    footer = moment(footer).fromNow();
+    footer = moment(footer).fromNow();        // use moment.js to convert created_at numbers to actual Timestamps of tweets
 
     const $tweet = $("<article>").addClass('content').html(`
 
         <header><img src=${avatar}><span class="tweetname">${twName}</span><span class="at">${at}</span>
         </header>
           <p>${cont}</p>
-        <footer><span class="content">${footer}</span><img class=icon src="/images/flag.png"><img class=icon src="/images/refresh.png"><img class=icon src="/images/heart.png">
+        <footer><span class="content">${footer}</span><img class=icon src="/images/heart.png"><img class=icon src="/images/refresh.png"><img class=icon src="/images/flag.png">
         </footer>
 
       `);
@@ -50,7 +50,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('.new-tweet .err').hide();
     const text = event.target[0].value;
-    event.target[0].value = escape(text);
+    event.target[0].value = escape(text);    // Preventing XSS with Escaping using function before serializing
     const textTyped = $(this).serialize();
 
     if(textTyped.length - 5 <= 140 && textTyped.length -5 !== 0) {
@@ -63,9 +63,9 @@ $(document).ready(function() {
           $('#testCounter').text('140');
         }
       });
-      this.reset();
+      this.reset();                         // clear textarea after submit
     } else {
-      $('.new-tweet .err').slideToggle();
+      $('.new-tweet .err').slideToggle();   // error message slidedown when text is more than 140 characters or empty
     }
   });
   loadTweets();

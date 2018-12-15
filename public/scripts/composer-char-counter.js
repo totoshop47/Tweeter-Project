@@ -12,7 +12,7 @@ $(document).ready(function() {
     if(textLeft <= 0) {
       $(currentCount).removeClass('nCounter');
     } else if(textLeft > 0) {
-      $(currentCount).addClass('nCounter');
+      $(currentCount).addClass('nCounter');          // add color change to counter when it goes below 0
     }
   });
 });
