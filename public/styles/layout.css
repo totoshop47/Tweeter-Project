@@ -21,12 +21,6 @@ body {
   background-color: #eeeeee;
 }
 
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
-
 main {
   position: relative;
   width: 450px;
@@ -34,36 +28,6 @@ main {
   margin: auto;
   padding-top:50px;
 
-}
-
-/*.content {
-  opacity: 0.7;
-}*/
-
-/*.content p {
-  opacity: 1.0;
-}*/
-.container {
-  height: 100%;
-}
-
-#tweets-container {
-  margin-top: 70px;
-  height: 100%
-}
-
-.content:hover header {
-  opacity: 1.0;
-}
-
-.content:hover .icon {
-  visibility: visible;
-}
-
-header img {
-  border-radius: 5px;
-  margin: 10px;
-  float: left;
 }
 
 header {
@@ -74,7 +38,16 @@ header {
   height: 70px;
   opacity: 0.7;
   border-radius: 5px;
+}
 
+header img {
+  border-radius: 5px;
+  margin: 10px;
+  float: left;
+}
+
+header span {
+  padding: 10px 10px 0 0;
 }
 
 header .tweetname {
@@ -90,10 +63,6 @@ header .at {
   float: right;
 }
 
-header span {
-  padding: 10px 10px 0 0;
-}
-
 footer {
   font-size: 1.0em;
   border-top: 1px solid #eeeeee;
@@ -106,13 +75,7 @@ footer img {
   width: 1.5em;
 }
 
-/*footer img:hover {
-  visibility: visible;
-}*/
 article {
-
-
-
   width: 80%;
   margin: 10px auto;
   border: 1px solid #cccccc;
@@ -126,11 +89,30 @@ article:hover {
 }
 
 p {
-
   overflow: hidden;
   margin: 20px 10px;
-
 }
+
+
+.container {
+  height: 100%;
+}
+
+.content:hover header {
+  opacity: 1.0;
+}
+
+.content:hover .icon {
+  visibility: visible;
+}
+
+
+#tweets-container {
+  margin-top: 70px;
+  height: 100%
+}
+
+
 
 
 

@@ -1,10 +1,11 @@
 $(document).ready(function() {
-  let counter = 140;
+
+  const counter = 140;
   $('.new-tweet form textarea').on('input', function(event){
 
-    let inputLength = $(this).serialize().length - 5;
-    let textLeft = counter - inputLength;
-    let currentCount = $(this).parent().children('.counter');
+    const inputLength = $(this).serialize().length - 5;
+    const textLeft = counter - inputLength;
+    const currentCount = $(this).parent().children('.counter');
 
     currentCount.text(textLeft);
 

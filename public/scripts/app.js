@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   function success(tweets) {
-    console.log('success');
     renderTweets(tweets);
   }
 
@@ -14,7 +13,7 @@ $(document).ready(function() {
   }
 
   function escape(str) {
-    var div = document.createElement('div');
+    const div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
@@ -27,15 +26,14 @@ $(document).ready(function() {
   }
 
   function createTweetElement(tweets) {
-    var twName = tweets.user.name;
-    var avatar = tweets.user.avatars.small;
-    var at = tweets.user.handle;
-    var cont = tweets.content.text;
-    // var footer = tweets.created_at;
-    var footer = tweets.created_at;
+    const twName = tweets.user.name;
+    const avatar = tweets.user.avatars.small;
+    const at = tweets.user.handle;
+    const cont = tweets.content.text;
+    let footer = tweets.created_at;
     footer = moment(footer).fromNow();
 
-    var $tweet = $("<article>").addClass('content').html(`
+    const $tweet = $("<article>").addClass('content').html(`
 
         <header><img src=${avatar}><span class="tweetname">${twName}</span><span class="at">${at}</span>
         </header>
@@ -51,9 +49,9 @@ $(document).ready(function() {
   $(".new-tweet form").on("submit", function(event) {
     event.preventDefault();
     $('.new-tweet .err').hide();
-    var text = event.target[0].value;
+    const text = event.target[0].value;
     event.target[0].value = escape(text);
-    var textTyped = $(this).serialize();
+    const textTyped = $(this).serialize();
 
     if(textTyped.length - 5 <= 140 && textTyped.length -5 !== 0) {
       $.ajax({
@@ -65,15 +63,12 @@ $(document).ready(function() {
           $('#testCounter').text('140');
         }
       });
+      this.reset();
     } else {
       $('.new-tweet .err').slideToggle();
-      $('#testCounter').text('140');
     }
-    this.reset();
   });
-
   loadTweets();
-
 });
 
 
