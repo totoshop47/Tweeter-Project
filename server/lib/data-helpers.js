@@ -9,12 +9,13 @@ module.exports = function makeDataHelpers(db) {
 
     // Saves a tweet to `db`
     saveTweet: function(newTweet, callback) {
-      db.collection("tweets").insertOne(newTweet, callback);
+      db.collection("tweeter").insertOne(newTweet, callback);
+      // console.log(newTweet["_id"].getTimestamp());
     },
 
     // Get all tweets in `db`, sorted by newest first
     getTweets: function(callback) {
-      db.collection("tweets").find().toArray(callback);
+      db.collection("tweeter").find().toArray(callback);
     }
 
   };

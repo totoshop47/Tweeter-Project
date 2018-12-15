@@ -30,11 +30,9 @@ body {
 main {
   position: relative;
   width: 450px;
-  /*height: 100vh;*/
   background-color: white;
   margin: auto;
   padding-top:50px;
-  /*height: 100%;*/
 
 }
 
@@ -45,6 +43,9 @@ main {
 /*.content p {
   opacity: 1.0;
 }*/
+.container {
+  height: 100%;
+}
 
 #tweets-container {
   margin-top: 70px;
